@@ -41,7 +41,7 @@ for i in datafr.columns[4:10]:
     plt.xlabel('BMI')
     plt.title('scatter plot '+ i + ' over BMI')
 #        plt.legend()
-    plt.savefig(i+'scatter.png')
+    plt.savefig('scatter'+'.png')
     plt.cla()
     plt.clf()
     plt.close()

@@ -48,8 +48,8 @@ for i in datafr.columns[4:10]:
   
 # F) Pseudocode for adding header in dataframe
         
-df = pd.read_csv('DiabetesDataset1.csv', sep=',',
-                 names = ['AGE', 'SEX', 'BMI', 'BP', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'Y'])
+# df = pd.read_csv('DiabetesDataset1.csv', sep=',',
+#                 names = ['AGE', 'SEX', 'BMI', 'BP', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'Y'])
 
 
 # G) The closest graphical representation I can find in Matplotlib for the Diabetes dataset

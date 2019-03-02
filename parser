@@ -30,12 +30,12 @@ for i in datafr.columns:
     plt.close()
 
 
-# E) #Loop over Columns of dataframe, plotting features against BMI
+# E) #Loop over Columns of dataframe, plotting features S1-S6 against BMI
 
 #bmi = datafr['BMI'].values
 #s1 = datafr['S1'].values
 
-for i in datafr.columns:
+for i in datafr.columns[4:10]:
     plt.scatter(bmi, datafr[i].values, marker = '^')
     plt.plot()
     plt.xlabel('BMI')
@@ -50,6 +50,23 @@ for i in datafr.columns:
         
 df = pd.read_csv('DiabetesDataset1.csv', sep=',',
                  names = ['AGE', 'SEX', 'BMI', 'BP', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'Y'])
+
+
+# G) The closest graphical representation I can find in Matplotlib for the Diabetes dataset
+
+from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd 
+
+datafr = pd.read_csv('DiabetesDataset1.csv', header=0, index_col=0, engine='python')
+
+cmap = plt.cm.coolwarm
+rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, 10)))
+
+fig, ax = plt.subplots()
+lines = ax.plot(datafr)
+ax.legend()
 
 # G) Additional plot - Stackplot for S1, S2, S3, S4, S5, S6 plotted against BMI
 
@@ -77,20 +94,7 @@ df = pd.read_csv('DiabetesDataset1.csv', sep=',',
 #plt.xlabel('BMI')
 #plt.show()
 
-# G) The closest graphical representation I can find in Matplotlib for the Diabetes dataset
-from matplotlib import rcParams, cycler
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd 
 
-datafr = pd.read_csv('DiabetesDataset1.csv', header=0, index_col=0, engine='python')
-
-cmap = plt.cm.coolwarm
-rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, 10)))
-
-fig, ax = plt.subplots()
-lines = ax.plot(datafr)
-ax.legend()
 
 
 

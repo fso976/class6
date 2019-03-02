@@ -32,7 +32,7 @@ for i in datafr.columns:
 
 # E) #Loop over Columns of dataframe, plotting features S1-S6 against BMI
 
-#bmi = datafr['BMI'].values
+bmi = datafr['BMI'].values
 #s1 = datafr['S1'].values
 
 for i in datafr.columns[4:10]:

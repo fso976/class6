@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb 27 21:53:59 2019
+
+@author: dragon
+"""
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# A, B) Load and organize data into dataframe
+datafr = pd.read_csv('DiabetesDataset1.csv', header=0, index_col=0, engine='python')
+
+# C) Compute summary statistics
+datafr.describe()
+#age = datafr['AGE'].values
+#print(age.max())
+
+# D) Loop through the dataset and print out the history for each feature (columns)
+
+for i in datafr.columns:
+    plt.hist(datafr[i], histtype='bar', rwidth = 0.8)
+    plt.xlabel(i)
+    plt.ylabel("Number of Participants")
+    plt.title('Histogram for ' + i)
+    plt.savefig(i+'.png')
+    plt.cla()
+    plt.clf()
+    plt.close()
+
+
+# E) #Loop over Columns of dataframe, plotting features against BMI
+
+#bmi = datafr['BMI'].values
+#s1 = datafr['S1'].values
+
+for i in datafr.columns:
+    plt.scatter(bmi, datafr[i].values, marker = '^')
+    plt.plot()
+    plt.xlabel('BMI')
+    plt.title('scatter plot '+ i + ' over BMI')
+#        plt.legend()
+    plt.savefig(i+'scatter.png')
+    plt.cla()
+    plt.clf()
+    plt.close()
+  
+# F) Pseudocode for adding header in dataframe
+        
+df = pd.read_csv('DiabetesDataset1.csv', sep=',',
+                 names = ['AGE', 'SEX', 'BMI', 'BP', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'Y'])
+
+# G) Additional plot - Stackplot for S1, S2, S3, S4, S5, S6 plotted against BMI
+
+#import numpy as np
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+#
+#
+#bmi = datafr['BMI'].values
+#s1 = datafr['S1'].values
+#s2 = datafr['S2'].values
+#s3 = datafr['S3'].values
+#s4 = datafr['S4'].values
+#s5 = datafr['S5'].values
+#s6 = datafr['S6'].values
+#
+#y = np.vstack([s1, s2, s3, s4, s5, s6])
+#
+#labels = ["S1","S2","S3","S4","S5","S6"]
+#
+#pal = sns.color_palette("Set1")
+#fig, ax = plt.subplots()
+#ax.stackplot(bmi, s1, s2, s3, s4, s5, s6, labels = labels, colors=pal, alpha=0.4)
+#ax.legend(loc='upper right')
+#plt.xlabel('BMI')
+#plt.show()
+
+# G) The closest graphical representation I can find in Matplotlib for the Diabetes dataset
+from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd 
+
+datafr = pd.read_csv('DiabetesDataset1.csv', header=0, index_col=0, engine='python')
+
+cmap = plt.cm.coolwarm
+rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, 10)))
+
+fig, ax = plt.subplots()
+lines = ax.plot(datafr)
+ax.legend()
+
+
+
+
+
+
+
+
+
+
+
+
+

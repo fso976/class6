@@ -67,6 +67,7 @@ rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, 10)))
 fig, ax = plt.subplots()
 lines = ax.plot(datafr)
 ax.legend()
+fig.savefig('cycleplot.png')
 
 # G) Additional plot - Stackplot for S1, S2, S3, S4, S5, S6 plotted against BMI
 

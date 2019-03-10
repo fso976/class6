@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # class-hw5
 CEBD1160 Homework #5 
 Assignment 5 - Psuedocode

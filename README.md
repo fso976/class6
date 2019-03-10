@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # class-hw5
 CEBD1160 Homework #5 
 Assignment 5 - Psuedocode
@@ -128,3 +129,6 @@ Recommendation: plan to use `matplotlib` for plotting
 
 
 
+=======
+# class6
+>>>>>>> bf571afdf37432a09f8cd55d71244a69764a6605

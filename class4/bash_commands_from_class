@@ -1,0 +1,51 @@
+    1  docker ps
+    2  export PS1='gkiar$ '
+    3  docker ps
+    4  ls
+    5  python
+    6  l
+    7  cd ~/code/class4/
+    8  l
+    9  ls
+   10  l
+   11  alias l=ls
+   12  l
+   13  clear
+   14  vi ~/.bashrc
+   15  l
+   16  docker images
+   17  docker build -t gkiar/my-new-image ./
+   18  cp Dockerfile weirddockerfilename
+   19  docker build -t gkiar/my-new-image ./ -f weirddockerfilename 
+   20  docker build -t gkiar/my-new-image:v0.1 ./
+   21  docker images
+   22  docker build -t gkiar/my-new-image:v0.1 ./
+   23  docker images
+   24  l
+   25  cat /etc/lsb-release
+   26  docker build -t gkiar/my-new-image:v0.1 ./
+   27  docker build -t gkiar/my-new-image:v0.1 ./
+   28  cat /etc/lsb-release
+   29  docker build -t gkiar/my-new-image:v0.1 ./
+   30  docker build -t gkiar/my-new-image:v0.1 ./
+   31  python --version
+   32  docker images
+   33  docker run -ti gkiar/my-new-image
+   34  docker run -ti gkiar/my-new-image:v0.1
+   35  docker build ./
+   36  docker images
+   37  docker images
+   38  docker build ./
+   39  docker images
+   40  docker build -t gkiar/irenamedit ./
+   41  docker images
+   42  docker build -t gkiar/class4:latest ./
+   43* docker run -ti -v /path/to/wherever/housing/data/is/on/this/machine/:/usr/housing.data   gkiar/class4:latest 
+   44  l
+   45  mkdir new
+   46  cd new/
+   47  docker build -t gkiar/class4:latest ./
+   48  ls
+   49  cd /Users/gkiar/code/class4
+   50  docker build -t gkiar/class4:latest ./
+   51  history
